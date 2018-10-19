@@ -11,7 +11,7 @@ import com.github.pagehelper.Page;
 public class PageBean extends BaseEntity {
   private static final long serialVersionUID = -1893970506336848554L;
   private int total;
-  private int pageNumber;
+  private int pageNumber=1;
   private int pageSize = 5;
   private int pageCount;
 
