@@ -9,6 +9,11 @@ package top.huhuiyu.springbootmybatisbase.utils;
 public class MyUtils {
 
   /**
+   * 回车换行
+   */
+  public static final String CRLF = String.format("%n");
+
+  /**
    * isEmpty-判断是否是null或者是全部都是空白字符
    * 
    * @param value
