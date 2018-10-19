@@ -1,4 +1,4 @@
-package top.huhuiyu.springbootmybatisbase.controller.test;
+package top.huhuiyu.springbootmybatisbase.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import top.huhuiyu.springbootmybatisbase.entity.JsonMessage;
 import top.huhuiyu.springbootmybatisbase.model.TestModel;
-import top.huhuiyu.springbootmybatisbase.service.test.TestService;
+import top.huhuiyu.springbootmybatisbase.service.TestService;
 
 /**
  * 测试控制器

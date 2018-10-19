@@ -1,4 +1,4 @@
-package top.huhuiyu.springbootmybatisbase.service.test;
+package top.huhuiyu.springbootmybatisbase.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -11,6 +11,7 @@ import top.huhuiyu.springbootmybatisbase.dao.TestDAO;
 import top.huhuiyu.springbootmybatisbase.entity.JsonMessage;
 import top.huhuiyu.springbootmybatisbase.entity.PageBean;
 import top.huhuiyu.springbootmybatisbase.entity.TbToken;
+import top.huhuiyu.springbootmybatisbase.service.TestService;
 
 /**
  * 

@@ -1,4 +1,4 @@
-package top.huhuiyu.springbootmybatisbase.service.test;
+package top.huhuiyu.springbootmybatisbase.service;
 
 import top.huhuiyu.springbootmybatisbase.entity.JsonMessage;
 import top.huhuiyu.springbootmybatisbase.entity.PageBean;
