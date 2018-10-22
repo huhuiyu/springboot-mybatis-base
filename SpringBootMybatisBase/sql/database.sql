@@ -11,11 +11,6 @@ create table TbConfig
   lastupdate timestamp comment '配置最后更新时间'
 );
 
-/*token过期时间配置*/
-insert into TbConfig(configKey,configValue) values('token.timeout','30');
-
-select * from TbConfig;
-
 /* 用户表 */
 create table TbUser
 (
@@ -27,11 +22,6 @@ create table TbUser
     comment '是否启用，y:启用（默认），n:停用',
   regDate timestamp default now() not null comment '注册时间'
 );
-/*添加默认用户*/
-insert into TbUser(username,password,nickname)
-  values('test','test-pwd','测试用户');
-  
-select * from TbUser;
 
 /* 用户Token追踪表 */
 create table TbToken
@@ -41,4 +31,14 @@ create table TbToken
   lastupdate timestamp comment '令牌环最后更新时间'
 );
 
-select * from TbToken;
+
+/* Token附加信息表 */
+create table TbTokenInfo
+(
+  token varchar(50) comment '令牌值',
+  infokey varchar(50) comment '令牌附加信息key',
+  info varchar(2000) comment '令牌附加信息',
+  lastupdate timestamp comment '令牌环最后更新时间',
+  constraint pkTbTokenInfo primary key(token,infokey)
+);
+

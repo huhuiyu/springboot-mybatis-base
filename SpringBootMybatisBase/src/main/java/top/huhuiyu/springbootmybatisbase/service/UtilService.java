@@ -1,6 +1,6 @@
 package top.huhuiyu.springbootmybatisbase.service;
 
-import top.huhuiyu.springbootmybatisbase.entity.TbToken;
+import top.huhuiyu.springbootmybatisbase.entity.TbTokenInfo;
 
 /**
  * 工具服务
@@ -13,10 +13,19 @@ public interface UtilService {
   /**
    * 获取图片校验码
    * 
-   * @param token
+   * @param tokenInfo
    * @return
    * @throws Exception
    */
-  String imageCode(TbToken token) throws Exception;
+  String imageCode(TbTokenInfo tokenInfo) throws Exception;
+
+  /**
+   * 查看校验码是否正确
+   * 
+   * @param tokenInfo
+   * @return
+   * @throws Exception
+   */
+  boolean checkImageCode(TbTokenInfo tokenInfo) throws Exception;
 
 }
