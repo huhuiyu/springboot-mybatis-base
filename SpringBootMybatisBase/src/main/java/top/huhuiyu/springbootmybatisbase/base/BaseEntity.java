@@ -1,4 +1,4 @@
-package top.huhuiyu.springbootmybatisbase.entity;
+package top.huhuiyu.springbootmybatisbase.base;
 
 import java.io.Serializable;
 
@@ -6,7 +6,7 @@ import com.alibaba.fastjson.JSONObject;
 
 /**
  * Entity和数据传输类型的对象的基础类，统一toString为json格式
- * 
+ *
  * @author DarkKnight
  *
  */

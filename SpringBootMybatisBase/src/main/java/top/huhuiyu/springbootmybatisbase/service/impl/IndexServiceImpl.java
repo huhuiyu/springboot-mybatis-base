@@ -6,11 +6,11 @@ import org.springframework.stereotype.Service;
 import top.huhuiyu.springbootmybatisbase.config.MyConfig;
 import top.huhuiyu.springbootmybatisbase.converter.DateConverter;
 import top.huhuiyu.springbootmybatisbase.dao.UtilsDAO;
-import top.huhuiyu.springbootmybatisbase.entity.JsonMessage;
 import top.huhuiyu.springbootmybatisbase.service.IndexService;
+import top.huhuiyu.springbootmybatisbase.utils.JsonMessage;
 
 /**
- * 
+ *
  * @author DarkKnight
  *
  */

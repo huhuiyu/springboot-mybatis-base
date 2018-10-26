@@ -1,4 +1,4 @@
-use SpringBootMybatisBase;
+use DbSpringBootMybatisBase;
 
 /* 清除数据 */
 truncate table TbConfig;
@@ -16,5 +16,5 @@ insert into TbUser(username,password,nickname)
 /*查询*/
 select configKey,configValue,lastupdate from TbConfig;
 select uid,username,password,nickname,isEnable,regDate from TbUser;
-select token,uid,lastupdate from TbToken;
+select token,lastupdate from TbToken;
 select token,infokey,info,lastupdate from TbTokenInfo;

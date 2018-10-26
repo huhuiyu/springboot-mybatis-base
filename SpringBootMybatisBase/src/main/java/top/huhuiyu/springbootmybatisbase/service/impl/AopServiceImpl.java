@@ -12,7 +12,7 @@ import top.huhuiyu.springbootmybatisbase.service.AopService;
 import top.huhuiyu.springbootmybatisbase.utils.MyUtils;
 
 /**
- * 
+ *
  * @author DarkKnight
  *
  */
@@ -24,7 +24,7 @@ public class AopServiceImpl implements AopService {
 
   /**
    * makeNewToken-创建一个新的token
-   * 
+   *
    * @return
    * @throws Exception
    */

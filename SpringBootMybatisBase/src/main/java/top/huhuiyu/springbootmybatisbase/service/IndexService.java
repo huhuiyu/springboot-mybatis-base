@@ -1,17 +1,18 @@
 package top.huhuiyu.springbootmybatisbase.service;
 
-import top.huhuiyu.springbootmybatisbase.entity.JsonMessage;
+import top.huhuiyu.springbootmybatisbase.utils.JsonMessage;
 
 /**
  * Index服务类
- * 
+ *
  * @author DarkKnight
  *
  */
 public interface IndexService {
 
   /**
-   * 首页显示信息
+   * -首页显示信息
+   * 
    * @return
    * @throws Exception
    */

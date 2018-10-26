@@ -1,11 +1,10 @@
-package top.huhuiyu.springbootmybatisbase.model;
+package top.huhuiyu.springbootmybatisbase.base;
 
-import top.huhuiyu.springbootmybatisbase.entity.BaseEntity;
 import top.huhuiyu.springbootmybatisbase.entity.TbToken;
 
 /**
  * model层（获取客户端数据）基础类
- * 
+ *
  * @author DarkKnight
  *
  */
@@ -31,10 +30,10 @@ public abstract class BaseModel extends BaseEntity {
 
   /**
    * getToken的委托方法，将客户端获取的token信息转递给TbToken对象
-   * 
+   *
    * @return
    */
-  public TbToken makeTokenInfo() {
+  public TbToken getTbToken() {
     TbToken tbToken = new TbToken();
     tbToken.setToken(token);
     return tbToken;

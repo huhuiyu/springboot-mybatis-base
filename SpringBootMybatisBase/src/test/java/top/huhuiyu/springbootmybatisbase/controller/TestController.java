@@ -4,13 +4,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import top.huhuiyu.springbootmybatisbase.entity.JsonMessage;
 import top.huhuiyu.springbootmybatisbase.model.TestModel;
 import top.huhuiyu.springbootmybatisbase.service.TestService;
+import top.huhuiyu.springbootmybatisbase.utils.JsonMessage;
 
 /**
- * 测试控制器
- * 
+ * -测试控制器
+ *
  * @author DarkKnight
  *
  */

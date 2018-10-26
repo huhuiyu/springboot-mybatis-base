@@ -7,7 +7,7 @@ import top.huhuiyu.springbootmybatisbase.utils.MyUtils;
 
 /**
  * Double数值转换器
- * 
+ *
  * @author DarkKnight
  *
  */

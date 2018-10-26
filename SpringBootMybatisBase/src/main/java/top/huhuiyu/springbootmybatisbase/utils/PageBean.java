@@ -1,17 +1,19 @@
-package top.huhuiyu.springbootmybatisbase.entity;
+package top.huhuiyu.springbootmybatisbase.utils;
 
 import com.github.pagehelper.Page;
 
+import top.huhuiyu.springbootmybatisbase.base.BaseEntity;
+
 /**
- * 分页信息类
- * 
+ * -分页信息类
+ *
  * @author DarkKnight
  *
  */
 public class PageBean extends BaseEntity {
   private static final long serialVersionUID = -1893970506336848554L;
   private int total;
-  private int pageNumber=1;
+  private int pageNumber = 1;
   private int pageSize = 5;
   private int pageCount;
 
@@ -19,8 +21,8 @@ public class PageBean extends BaseEntity {
   }
 
   /**
-   * 通过分页插件信息设置page信息
-   * 
+   * -通过分页插件信息设置page信息
+   *
    * @param page
    * @return
    */

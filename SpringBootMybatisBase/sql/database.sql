@@ -1,7 +1,7 @@
 use information_schema;
-drop database if exists SpringBootMybatisBase;
-create database SpringBootMybatisBase default charset utf8 collate utf8_general_ci;
-use SpringBootMybatisBase;
+drop database if exists DbSpringBootMybatisBase;
+create database DbSpringBootMybatisBase default charset utf8 collate utf8_general_ci;
+use DbSpringBootMybatisBase;
 
 /*系统配置表*/
 create table TbConfig
@@ -27,10 +27,8 @@ create table TbUser
 create table TbToken
 (
   token varchar(50) primary key comment '令牌值，自然主键',
-  uid int comment '令牌对应的用户，可以是null，表示用户还没有登录',
   lastupdate timestamp comment '令牌环最后更新时间'
 );
-
 
 /* Token附加信息表 */
 create table TbTokenInfo
@@ -41,4 +39,3 @@ create table TbTokenInfo
   lastupdate timestamp comment '令牌环最后更新时间',
   constraint pkTbTokenInfo primary key(token,infokey)
 );
-

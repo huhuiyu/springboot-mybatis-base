@@ -5,7 +5,7 @@ import org.springframework.context.annotation.Configuration;
 
 /**
  * application.properties自定义配置属性
- * 
+ *
  * @author DarkKnight
  *
  */

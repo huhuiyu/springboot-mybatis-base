@@ -2,9 +2,11 @@ package top.huhuiyu.springbootmybatisbase.entity;
 
 import java.util.Date;
 
+import top.huhuiyu.springbootmybatisbase.base.BaseEntity;
+
 /**
  * TbTokenInfo表
- * 
+ *
  * @author DarkKnight
  *
  */
@@ -16,13 +18,6 @@ public class TbTokenInfo extends BaseEntity {
   private Date lastupdate;
 
   public TbTokenInfo() {
-  }
-
-  public TbTokenInfo(String token, String infokey, String info, Date lastupdate) {
-    this.token = token;
-    this.infokey = infokey;
-    this.info = info;
-    this.lastupdate = lastupdate;
   }
 
   public String getToken() {

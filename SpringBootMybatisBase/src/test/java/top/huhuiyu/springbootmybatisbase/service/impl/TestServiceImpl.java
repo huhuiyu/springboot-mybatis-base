@@ -5,16 +5,16 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.github.pagehelper.Page;
-import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.page.PageMethod;
 
 import top.huhuiyu.springbootmybatisbase.dao.TestDAO;
-import top.huhuiyu.springbootmybatisbase.entity.JsonMessage;
-import top.huhuiyu.springbootmybatisbase.entity.PageBean;
 import top.huhuiyu.springbootmybatisbase.entity.TbToken;
 import top.huhuiyu.springbootmybatisbase.service.TestService;
+import top.huhuiyu.springbootmybatisbase.utils.JsonMessage;
+import top.huhuiyu.springbootmybatisbase.utils.PageBean;
 
 /**
- * 
+ *
  * @author DarkKnight
  *
  */
@@ -26,7 +26,7 @@ public class TestServiceImpl implements TestService {
 
   @Override
   public JsonMessage queryTokens(PageBean page) throws Exception {
-    PageHelper.startPage(page.getPageNumber(), page.getPageSize());
+    PageMethod.startPage(page.getPageNumber(), page.getPageSize());
     Page<TbToken> list = (Page<TbToken>) testDAO.queryTokens();
     page.setPageInfo(list);
     JsonMessage message = JsonMessage.getSuccess("");

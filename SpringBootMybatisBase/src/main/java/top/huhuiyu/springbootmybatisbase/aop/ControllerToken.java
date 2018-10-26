@@ -6,14 +6,15 @@ import org.aspectj.lang.annotation.Aspect;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import top.huhuiyu.springbootmybatisbase.entity.JsonMessage;
+import top.huhuiyu.springbootmybatisbase.base.BaseAop;
+import top.huhuiyu.springbootmybatisbase.base.BaseModel;
 import top.huhuiyu.springbootmybatisbase.entity.TbToken;
-import top.huhuiyu.springbootmybatisbase.model.BaseModel;
 import top.huhuiyu.springbootmybatisbase.service.AopService;
+import top.huhuiyu.springbootmybatisbase.utils.JsonMessage;
 
 /**
- * 控制器token处理
- * 
+ * -控制器token处理
+ *
  * @author DarkKnight
  *
  */
@@ -24,8 +25,8 @@ public class ControllerToken extends BaseAop {
   private AopService aopService;
 
   /**
-   * 处理客户端提交的Token
-   * 
+   * -处理客户端提交的Token
+   *
    * @param pjp
    * @return
    * @throws Exception
@@ -41,7 +42,7 @@ public class ControllerToken extends BaseAop {
         // 获取客户端token
         haveBaseModel = true;
         model = (BaseModel) arg;
-        token = model.makeTokenInfo();
+        token = model.getTbToken();
         break;
       }
     }
@@ -55,7 +56,8 @@ public class ControllerToken extends BaseAop {
   }
 
   /**
-   * 处理应答的Token信息
+   * -处理应答的Token信息
+   *
    * @param result
    * @param token
    * @throws Exception
@@ -68,6 +70,13 @@ public class ControllerToken extends BaseAop {
     }
   }
 
+  /**
+   * -控制器token相关切面处理
+   * 
+   * @param pjp
+   * @return
+   * @throws Throwable
+   */
   @Around("controllerPointcut()")
   public Object token(ProceedingJoinPoint pjp) throws Throwable {
     TbToken token = processInputToken(pjp);

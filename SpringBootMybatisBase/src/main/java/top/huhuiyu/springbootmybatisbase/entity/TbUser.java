@@ -2,9 +2,11 @@ package top.huhuiyu.springbootmybatisbase.entity;
 
 import java.util.Date;
 
+import top.huhuiyu.springbootmybatisbase.base.BaseEntity;
+
 /**
  * TbUser表
- * 
+ *
  * @author DarkKnight
  *
  */
@@ -19,15 +21,6 @@ public class TbUser extends BaseEntity {
   private Date regDate;
 
   public TbUser() {
-  }
-
-  public TbUser(Integer uid, String username, String password, String nickname, String isEnable, Date regDate) {
-    this.uid = uid;
-    this.username = username;
-    this.password = password;
-    this.nickname = nickname;
-    this.isEnable = isEnable;
-    this.regDate = regDate;
   }
 
   public Integer getUid() {

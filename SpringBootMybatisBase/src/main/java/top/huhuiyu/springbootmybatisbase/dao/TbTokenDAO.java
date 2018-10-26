@@ -6,7 +6,7 @@ import top.huhuiyu.springbootmybatisbase.entity.TbToken;
 
 /**
  * TbToken-数据访问类
- * 
+ *
  * @author DarkKnight
  *
  */
@@ -14,7 +14,7 @@ import top.huhuiyu.springbootmybatisbase.entity.TbToken;
 public interface TbTokenDAO {
   /**
    * addToken-添加token
-   * 
+   *
    * @param token
    * @return
    * @throws Exception
@@ -23,7 +23,7 @@ public interface TbTokenDAO {
 
   /**
    * updateToken-更新token时间
-   * 
+   *
    * @param token
    * @return
    * @throws Exception
@@ -32,7 +32,7 @@ public interface TbTokenDAO {
 
   /**
    * queryToken-查询token是否存在
-   * 
+   *
    * @param token
    * @return
    * @throws Exception
@@ -41,7 +41,7 @@ public interface TbTokenDAO {
 
   /**
    * deleteTokens-删除过期的token
-   * 
+   *
    * @return
    * @throws Exception
    */

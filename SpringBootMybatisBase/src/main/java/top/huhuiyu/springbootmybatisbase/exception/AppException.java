@@ -2,7 +2,7 @@ package top.huhuiyu.springbootmybatisbase.exception;
 
 /**
  * AppException-应用程序自定义异常（需要指定code和message）
- * 
+ *
  * @author DarkKnight
  *
  */

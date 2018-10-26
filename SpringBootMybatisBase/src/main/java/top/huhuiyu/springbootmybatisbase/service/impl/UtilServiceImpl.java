@@ -11,7 +11,7 @@ import top.huhuiyu.springbootmybatisbase.utils.ImageCode;
 import top.huhuiyu.springbootmybatisbase.utils.MyUtils;
 
 /**
- * 
+ *
  * @author DarkKnight
  *
  */

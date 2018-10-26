@@ -7,14 +7,14 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.NoHandlerFoundException;
 
-import top.huhuiyu.springbootmybatisbase.entity.JsonMessage;
 import top.huhuiyu.springbootmybatisbase.exception.AppException;
+import top.huhuiyu.springbootmybatisbase.utils.JsonMessage;
 
 /**
  * controller层全局错误处理器 <br>
- * ControllerAdvice注解表示是控制器层拦截处理（aop-面向切面编程）<br>
+ * ControllerAdvice注解表示是控制器层拦截处理<br>
  * ExceptionHandler注解表示方法为错误处理器，参数是错误的类型
- * 
+ *
  * @author DarkKnight
  *
  */

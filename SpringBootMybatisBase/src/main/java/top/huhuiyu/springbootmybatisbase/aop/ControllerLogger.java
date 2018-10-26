@@ -9,11 +9,12 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
+import top.huhuiyu.springbootmybatisbase.base.BaseAop;
 import top.huhuiyu.springbootmybatisbase.utils.MyUtils;
 
 /**
- * 控制器日志切面
- * 
+ * - 控制器日志切面
+ *
  * @author DarkKnight
  *
  */

@@ -7,7 +7,7 @@ import top.huhuiyu.springbootmybatisbase.utils.MyUtils;
 
 /**
  * Integer数值转换器
- * 
+ *
  * @author DarkKnight
  *
  */

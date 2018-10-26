@@ -1,10 +1,10 @@
-package top.huhuiyu.springbootmybatisbase.model;
+package top.huhuiyu.springbootmybatisbase.base;
 
-import top.huhuiyu.springbootmybatisbase.entity.PageBean;
+import top.huhuiyu.springbootmybatisbase.utils.PageBean;
 
 /**
- * 带分页的model基础类
- * 
+ * -带分页的model基础类
+ *
  * @author DarkKnight
  *
  */

@@ -6,7 +6,7 @@ import top.huhuiyu.springbootmybatisbase.entity.TbTokenInfo;
 
 /**
  * TbTokenInfo表的dao
- * 
+ *
  * @author DarkKnight
  *
  */
@@ -15,7 +15,7 @@ public interface TbTokenInfoDAO {
 
   /**
    * -查询图片校验码是否存在
-   * 
+   *
    * @param tokenInfo
    * @return
    * @throws Exception
@@ -24,7 +24,7 @@ public interface TbTokenInfoDAO {
 
   /**
    * -添加图片校验码
-   * 
+   *
    * @param tokenInfo
    * @return
    * @throws Exception
@@ -33,7 +33,7 @@ public interface TbTokenInfoDAO {
 
   /**
    * -更新图片校验码
-   * 
+   *
    * @param tokenInfo
    * @return
    * @throws Exception
@@ -42,7 +42,7 @@ public interface TbTokenInfoDAO {
 
   /**
    * -删除图片校验码
-   * 
+   *
    * @param tokenInfo
    * @return
    * @throws Exception

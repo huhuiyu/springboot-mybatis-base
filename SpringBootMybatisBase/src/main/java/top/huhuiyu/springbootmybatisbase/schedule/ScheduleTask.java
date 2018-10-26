@@ -9,8 +9,8 @@ import org.springframework.stereotype.Component;
 import top.huhuiyu.springbootmybatisbase.service.ScheduleTaskService;
 
 /**
- * 计划任务
- * 
+ * -计划任务
+ *
  * @author DarkKnight
  *
  */
@@ -29,6 +29,7 @@ public class ScheduleTask {
   public void deleteTokens() {
     log.debug("删除过期token");
     try {
+      // TODO 需要删除token相关信息
       int result = scheduleTaskService.deleteTokens();
       log.debug("删除过期token数量：" + result);
     } catch (Exception ex) {

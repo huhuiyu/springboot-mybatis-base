@@ -1,11 +1,13 @@
-package top.huhuiyu.springbootmybatisbase.entity;
+package top.huhuiyu.springbootmybatisbase.utils;
 
 import java.util.HashMap;
 import java.util.Map;
 
+import top.huhuiyu.springbootmybatisbase.base.BaseEntity;
+
 /**
  * json统一应答格式（只要是数据应答都是用该格式）
- * 
+ *
  * @author DarkKnight
  *
  */
@@ -35,7 +37,7 @@ public class JsonMessage extends BaseEntity {
 
   /**
    * getMessage：静态工厂方法，获取一个JsonMessage的实例
-   * 
+   *
    * @param success 是否成功应答
    * @param code    服务器应答code
    * @param message 服务器应答信息
@@ -51,7 +53,7 @@ public class JsonMessage extends BaseEntity {
 
   /**
    * getSuccess：委托方法，获取成功的应答
-   * 
+   *
    * @param message 成功的消息
    * @return
    */
@@ -62,7 +64,7 @@ public class JsonMessage extends BaseEntity {
 
   /**
    * getFail：委托方法，获取指定错误code的失败应答
-   * 
+   *
    * @param code
    * @param message
    * @return
@@ -74,7 +76,7 @@ public class JsonMessage extends BaseEntity {
 
   /**
    * getFail：错误应答的委托方法
-   * 
+   *
    * @param message
    * @return
    */
@@ -84,7 +86,7 @@ public class JsonMessage extends BaseEntity {
 
   /**
    * put-放置应答数据
-   * 
+   *
    * @param key  应答的key
    * @param data 应答的数据
    * @return
@@ -96,7 +98,7 @@ public class JsonMessage extends BaseEntity {
 
   public JsonMessage() {
   }
-  
+
   public String getToken() {
     return token;
   }

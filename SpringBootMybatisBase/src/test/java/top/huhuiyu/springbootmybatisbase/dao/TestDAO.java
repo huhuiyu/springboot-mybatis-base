@@ -7,8 +7,8 @@ import org.apache.ibatis.annotations.Mapper;
 import top.huhuiyu.springbootmybatisbase.entity.TbToken;
 
 /**
- * 测试dao
- * 
+ * -测试dao
+ *
  * @author DarkKnight
  *
  */
@@ -16,8 +16,8 @@ import top.huhuiyu.springbootmybatisbase.entity.TbToken;
 public interface TestDAO {
 
   /**
-   * 查询token
-   * 
+   * -查询token
+   *
    * @return
    * @throws Exception
    */

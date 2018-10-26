@@ -1,8 +1,10 @@
 package top.huhuiyu.springbootmybatisbase.model;
 
+import top.huhuiyu.springbootmybatisbase.base.BaseModel;
+
 /**
- * 首页model
- * 
+ * -首页model
+ *
  * @author DarkKnight
  *
  */
