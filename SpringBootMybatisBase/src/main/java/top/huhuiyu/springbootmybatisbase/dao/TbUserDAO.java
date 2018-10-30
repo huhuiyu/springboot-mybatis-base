@@ -2,6 +2,7 @@ package top.huhuiyu.springbootmybatisbase.dao;
 
 import org.apache.ibatis.annotations.Mapper;
 
+import top.huhuiyu.springbootmybatisbase.entity.TbToken;
 import top.huhuiyu.springbootmybatisbase.entity.TbUser;
 
 /**
@@ -20,4 +21,13 @@ public interface TbUserDAO {
    * @throws Exception
    */
   TbUser queryByName(TbUser user) throws Exception;
+
+  /**
+   * -查询token中的用户信息
+   * 
+   * @param token
+   * @return
+   * @throws Exception
+   */
+  TbUser queryByToken(TbToken token) throws Exception;
 }

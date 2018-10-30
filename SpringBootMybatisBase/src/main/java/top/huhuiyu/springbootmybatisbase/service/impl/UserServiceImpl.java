@@ -59,4 +59,20 @@ public class UserServiceImpl implements UserService {
     return JsonMessage.getSuccess("登录成功");
   }
 
+  @Override
+  public JsonMessage logout(UserModel model) throws Exception {
+    tbTokenInfoDAO.deleteUser(model.makeTbTokenInfo());
+    return JsonMessage.getSuccess("安全退出成功");
+  }
+
+  @Override
+  public JsonMessage queryUserInfo(UserModel model) throws Exception {
+    TbUser user = tbUserDAO.queryByToken(model.makeTbToken());
+    if (user != null) {
+      user.setUid(null);
+    }
+    JsonMessage message = JsonMessage.getSuccess("");
+    message.getDatas().put("user", user);
+    return message;
+  }
 }

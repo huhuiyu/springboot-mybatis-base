@@ -22,6 +22,20 @@ public class UserController {
 
   @RequestMapping("/login")
   public JsonMessage login(UserModel model) throws Exception {
+    // {"user.username":"test","user.password":"test-pwd"}
     return userService.login(model);
   }
+
+  @RequestMapping("/logout")
+  public JsonMessage logout(UserModel model) throws Exception {
+    // {}
+    return userService.logout(model);
+  }
+
+  @RequestMapping("/queryUserInfo")
+  public JsonMessage queryUserInfo(UserModel model) throws Exception {
+    // {}
+    return userService.queryUserInfo(model);
+  }
+
 }

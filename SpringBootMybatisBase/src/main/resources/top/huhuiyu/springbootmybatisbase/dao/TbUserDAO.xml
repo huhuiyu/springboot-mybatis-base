@@ -3,8 +3,16 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="top.huhuiyu.springbootmybatisbase.dao.TbUserDAO">
+
   <select id="queryByName" resultType="TbUser" parameterType="TbUser">
     select uid,username,password,nickname,isEnable,regDate from TbUser
-    where username=#{username}
+    where username=#{username} and isEnable='y'
   </select>
+
+  <select id="queryByToken" resultType="TbUser" parameterType="TbToken">
+    select uid,username,password,nickname,isEnable,regDate from TbUser
+    where uid=(select info from TbTokenInfo where token=#{token} and infokey='user')
+    and isEnable='y'
+  </select>
+
 </mapper>

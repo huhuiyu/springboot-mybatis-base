@@ -20,4 +20,22 @@ public interface UserService {
    */
   JsonMessage login(UserModel model) throws Exception;
 
+  /**
+   * -用户登出
+   * 
+   * @param model
+   * @return
+   * @throws Exception
+   */
+  JsonMessage logout(UserModel model) throws Exception;
+
+  /**
+   * -查询token中用户
+   * 
+   * @param model
+   * @return
+   * @throws Exception
+   */
+  JsonMessage queryUserInfo(UserModel model) throws Exception;
+
 }
