@@ -28,8 +28,7 @@ public class UtilController {
   @RequestMapping("/validate.jpg")
   public void imageCode(UtilModel model, HttpServletResponse response) throws Exception {
     // http://127.0.0.1:14000/util/validate.jpg?token=5bc8c8a6-63c7-421e-905b-a89a9fd1bb63
-    TbTokenInfo tokenInfo = new TbTokenInfo();
-    tokenInfo.setToken(model.getToken());
+    TbTokenInfo tokenInfo = model.makeTbTokenInfo();
     ImageIO.write(ImageCode.makeImage(utilService.imageCode(tokenInfo)), "jpeg", response.getOutputStream());
   }
 
