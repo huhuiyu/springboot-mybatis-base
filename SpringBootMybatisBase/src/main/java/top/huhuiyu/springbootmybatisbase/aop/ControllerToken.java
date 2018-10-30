@@ -42,7 +42,7 @@ public class ControllerToken extends BaseAop {
         // 获取客户端token
         haveBaseModel = true;
         model = (BaseModel) arg;
-        token = model.getTbToken();
+        token = model.makeTbToken();
         break;
       }
     }

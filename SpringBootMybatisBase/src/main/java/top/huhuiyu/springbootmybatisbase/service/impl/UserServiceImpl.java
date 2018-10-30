@@ -43,10 +43,10 @@ public class UserServiceImpl implements UserService {
     if (!suser.getPassword().equalsIgnoreCase(user.getPassword())) {
       return JsonMessage.getFail("密码不正确");
     }
-    TbTokenInfo info = tbTokenInfoDAO.queryUserByToken(model.getTbTokenInfo());
+    TbTokenInfo info = tbTokenInfoDAO.queryUserByToken(model.makeTbTokenInfo());
     int result;
     if (info == null) {
-      info = model.getTbTokenInfo();
+      info = model.makeTbTokenInfo();
       info.setInfo(suser.getUid() + "");
       result = tbTokenInfoDAO.addUser(info);
     } else {

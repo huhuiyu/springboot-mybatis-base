@@ -34,7 +34,7 @@ public abstract class BaseModel extends BaseEntity {
    *
    * @return
    */
-  public TbToken getTbToken() {
+  public TbToken makeTbToken() {
     TbToken tbToken = new TbToken();
     tbToken.setToken(token);
     return tbToken;
@@ -45,7 +45,7 @@ public abstract class BaseModel extends BaseEntity {
    *
    * @return
    */
-  public TbTokenInfo getTbTokenInfo() {
+  public TbTokenInfo makeTbTokenInfo() {
     TbTokenInfo info = new TbTokenInfo();
     info.setToken(token);
     return info;
