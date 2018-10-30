@@ -23,13 +23,12 @@ public class ScheduleTask {
   private ScheduleTaskService scheduleTaskService;
 
   /**
-   * 定时删除过期token
+   * -定时删除过期token
    */
   @Scheduled(initialDelay = 3 * 1000, fixedDelay = 5 * 60 * 1000)
   public void deleteTokens() {
     log.debug("删除过期token");
     try {
-      // TODO 需要删除token相关信息
       int result = scheduleTaskService.deleteTokens();
       log.debug("删除过期token数量：" + result);
     } catch (Exception ex) {

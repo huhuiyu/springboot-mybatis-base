@@ -14,6 +14,14 @@ import top.huhuiyu.springbootmybatisbase.entity.TbTokenInfo;
 public interface TbTokenInfoDAO {
 
   /**
+   * -删除过期的TokenInfo
+   * 
+   * @return
+   * @throws Exception
+   */
+  int deleteTokenInfos() throws Exception;
+
+  /**
    * -查询图片校验码是否存在
    *
    * @param tokenInfo
@@ -48,4 +56,41 @@ public interface TbTokenInfoDAO {
    * @throws Exception
    */
   int deleteImageCode(TbTokenInfo tokenInfo) throws Exception;
+
+  /**
+   * -查询用户是否存在
+   *
+   * @param tokenInfo
+   * @return
+   * @throws Exception
+   */
+  TbTokenInfo queryUserByToken(TbTokenInfo tokenInfo) throws Exception;
+
+  /**
+   * -添加用户
+   *
+   * @param tokenInfo
+   * @return
+   * @throws Exception
+   */
+  int addUser(TbTokenInfo tokenInfo) throws Exception;
+
+  /**
+   * -更新用户
+   *
+   * @param tokenInfo
+   * @return
+   * @throws Exception
+   */
+  int updateUser(TbTokenInfo tokenInfo) throws Exception;
+
+  /**
+   * -删除用户
+   *
+   * @param tokenInfo
+   * @return
+   * @throws Exception
+   */
+  int deleteUser(TbTokenInfo tokenInfo) throws Exception;
+
 }
