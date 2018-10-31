@@ -1,11 +1,19 @@
 package top.huhuiyu.springbootmybatisbase.controller;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.util.UUID;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.multipart.MultipartFile;
 
 import top.huhuiyu.springbootmybatisbase.entity.TbTokenInfo;
 import top.huhuiyu.springbootmybatisbase.model.TestModel;
+import top.huhuiyu.springbootmybatisbase.model.TestUpload;
 import top.huhuiyu.springbootmybatisbase.service.TestService;
 import top.huhuiyu.springbootmybatisbase.service.UtilService;
 import top.huhuiyu.springbootmybatisbase.utils.JsonMessage;
@@ -19,6 +27,10 @@ import top.huhuiyu.springbootmybatisbase.utils.JsonMessage;
 @RestController
 @RequestMapping("/test")
 public class TestController {
+  /**
+   * -上传文件目录
+   */
+  public static final String UPLOAD = "/uploadfiles/";
 
   @Autowired
   private TestService testService;
@@ -39,4 +51,35 @@ public class TestController {
     boolean result = utilService.checkImageCode(tokenInfo);
     return result ? JsonMessage.getSuccess("图片校验码正确") : JsonMessage.getFail("图片校验码错误");
   }
+
+  @RequestMapping("/upload")
+  public JsonMessage upload(TestModel model, MultipartFile file) throws Exception {
+    if (file == null || file.isEmpty()) {
+      return JsonMessage.getFail("没有上传文件！");
+    }
+    TestUpload upload = new TestUpload();
+    upload.setContentType(file.getContentType());
+    upload.setFilename(file.getOriginalFilename());
+    upload.setSize(file.getSize());
+    File savefile = new File(System.getProperty("user.dir") + UPLOAD, UUID.randomUUID().toString());
+    if (!savefile.getParentFile().exists()) {
+      savefile.getParentFile().mkdirs();
+    }
+    upload.setUrl(UPLOAD + savefile.getName());
+    InputStream is = file.getInputStream();
+    OutputStream os = new FileOutputStream(savefile);
+    byte[] bytes = new byte[8 * 1024];
+    int len = is.read(bytes);
+    while (len > 0) {
+      os.write(bytes, 0, len);
+      os.flush();
+      len = is.read(bytes);
+    }
+    is.close();
+    os.close();
+    JsonMessage message = JsonMessage.getSuccess("上传成功！" + model.getImageCode());
+    message.getDatas().put("upfile", upload);
+    return message;
+  }
+
 }
