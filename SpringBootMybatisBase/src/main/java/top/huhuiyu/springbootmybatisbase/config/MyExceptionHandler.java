@@ -5,6 +5,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.multipart.MultipartException;
 import org.springframework.web.servlet.NoHandlerFoundException;
 
 import top.huhuiyu.springbootmybatisbase.exception.AppException;
@@ -35,6 +36,9 @@ public class MyExceptionHandler {
     // 处理资源查找（404）错误
     if (ex instanceof NoHandlerFoundException) {
       return JsonMessage.getFail(404, "资源不存在");
+    }
+    if (ex instanceof MultipartException) {
+      return JsonMessage.getFail("文件上传超过限制");
     }
     return JsonMessage.getFail("服务器忙，请稍后重试！");
   }
